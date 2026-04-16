@@ -49,12 +49,26 @@ h1 {
 
 #printArea {
   width: 8.5in;
+  margin: 0 auto;
 }
 
-#labels {
+.sheet {
+  width: 8.5in;
+  min-height: 11in;
+  box-sizing: border-box;
+  page-break-after: always;
+  break-after: page;
+}
+
+.sheet:last-child {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+.labels-sheet {
   display: grid;
   grid-template-columns: repeat(3, 2.625in);
-  grid-auto-rows: 1in;
+  grid-template-rows: repeat(10, 1in);
   column-gap: 0.125in;
   row-gap: 0;
   width: 8.5in;
@@ -99,7 +113,10 @@ h1 {
 
 @page {
   size: letter;
-  margin: 0.5in 0.1875in;
+  margin-top: 0.5in;
+  margin-bottom: 0.5in;
+  margin-left: 0.1875in;
+  margin-right: 0.1875in;
 }
 
 @media print {
@@ -118,7 +135,12 @@ h1 {
     padding: 0;
   }
 
-  #labels {
+  .sheet {
+    margin: 0;
+    padding: 0;
+  }
+
+  .labels-sheet {
     margin: 0;
   }
 }
