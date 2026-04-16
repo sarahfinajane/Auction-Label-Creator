@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auction Label Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-wrap no-print">
+    <h1>Auction Label Generator</h1>
+
+    <div class="controls">
+      <label for="prefix">Prefix Letters (example: HB)</label>
+      <input id="prefix" type="text" value="HB">
+
+      <label for="auctionNumber">Auction Number (3–4 digits)</label>
+      <input id="auctionNumber" type="text" value="123">
+
+      <label for="startNumber">Start Number</label>
+      <input id="startNumber" type="number" value="1" min="1">
+
+      <label for="totalLabels">Total Labels</label>
+      <input id="totalLabels" type="number" value="30" min="1">
+
+      <label for="note">Middle Note (optional)</label>
+      <input id="note" type="text" placeholder="Small note">
+
+      <label for="font">Font</label>
+      <select id="font">
+        <option value="Arial, sans-serif">Arial</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="'Courier New', monospace">Courier New</option>
+        <option value="'Times New Roman', serif">Times New Roman</option>
+      </select>
+
+      <label for="borderStyle">Border Style</label>
+      <select id="borderStyle">
+        <option value="solid">Solid</option>
+        <option value="dashed">Dashed</option>
+        <option value="dotted">Dotted</option>
+        <option value="double">Double</option>
+      </select>
+
+      <label for="color">Text / Border Color</label>
+      <input id="color" type="color" value="#000000">
+
+      <label for="textSize">Text Size</label>
+      <select id="textSize">
+        <option value="12">Small</option>
+        <option value="14" selected>Medium</option>
+        <option value="16">Large</option>
+        <option value="18">Extra Large</option>
+      </select>
+    </div>
+
+    <div class="button-row">
+      <button type="button" onclick="generateLabels()">Generate Labels</button>
+      <button type="button" onclick="printLabels()">Print Labels</button>
+    </div>
+  </div>
+
+  <div id="printArea">
+    <div id="labels"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
