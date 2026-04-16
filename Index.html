@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auction Label Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Auction Label Generator</h1>
+
+<div class="controls">
+  <label>Prefix Letters (ex: HB)</label>
+  <input id="prefix" value="HB">
+
+  <label>Auction Number (3–4 digits)</label>
+  <input id="auctionNumber" value="123">
+
+  <label>Start Number</label>
+  <input id="startNumber" type="number" value="1">
+
+  <label>Total Labels</label>
+  <input id="totalLabels" type="number" value="30">
+
+  <label>Note (optional)</label>
+  <input id="note" placeholder="Small note...">
+
+  <label>Font</label>
+  <select id="font">
+    <option value="Arial">Arial</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Courier New">Courier</option>
+  </select>
+
+  <label>Border Style</label>
+  <select id="borderStyle">
+    <option value="solid">Solid</option>
+    <option value="dashed">Dashed</option>
+    <option value="dotted">Dotted</option>
+  </select>
+
+  <label>Color</label>
+  <input id="color" type="color" value="#000000">
+
+  <button onclick="generateLabels()">Generate Labels</button>
+</div>
+
+<div id="labels"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
