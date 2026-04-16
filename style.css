@@ -1,0 +1,52 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#labels {
+  display: grid;
+  grid-template-columns: repeat(3, 2.625in);
+  grid-auto-rows: 1in;
+  gap: 0.125in 0.1875in;
+}
+
+.label {
+  width: 2.625in;
+  height: 1in;
+  box-sizing: border-box;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.left {
+  font-weight: bold;
+}
+
+.right {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.note {
+  position: absolute;
+  font-size: 10px;
+  text-align: center;
+  width: 100%;
+  top: 40%;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+}
